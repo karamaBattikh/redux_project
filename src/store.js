@@ -1,5 +1,6 @@
 import { applyMiddleware, createStore, combineReducers } from 'redux'
 import counter from './reducers/counter';
+import friends from './reducers/friends';
 
 const logger = store => next => action => {
   console.log('dispatching', action)
@@ -10,6 +11,7 @@ const logger = store => next => action => {
 
 const rootReducer = combineReducers({
   counter: counter,
+  friendsList: friends,
 });
 
 const store = createStore(rootReducer, {}, applyMiddleware(logger));

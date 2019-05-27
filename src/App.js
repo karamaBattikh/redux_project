@@ -2,17 +2,21 @@ import React from 'react';
 import { Provider } from 'react-redux'
 import store from './store';
 import './App.css';
-import Count from './Component/Count';
-import Button from './Component/Button';
+import { Count, Button } from './Component/CountComponent';
+import Friends from './Component/FriendComponent';
 
 function App() {
   return (
     <Provider store={store} >
       <div className="App">
-        <header className="App-header">
+        <div className="App-div">
           <Count />
           <Button />
-        </header>
+        </div>
+        <hr />
+        <div className="App-div">
+         <Friends />
+        </div>
       </div>
     </Provider>
   );

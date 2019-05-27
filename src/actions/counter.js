@@ -1,11 +1,11 @@
-
+import { DEC, INC } from './Types';
 
 export const increment = (number) => ({
-  type: 'inc',
+  type: INC,
   payload: number,
 })
 
 export const decremente = (number) => ({
-  type: 'dec',
+  type: DEC ,
   payload: number,
 })
